@@ -1,0 +1,16 @@
+{
+    "aniversarios": [
+        {
+            "nome": "pedro",
+            "nascimento": "20-09-2000"
+        },
+        {
+            "nome": "jessica",
+            "nascimento": "01-09-1994"
+        },
+        {
+            "nome": "ronaldo",
+            "nascimento": "18-11-1965"
+        }
+    ]
+}
