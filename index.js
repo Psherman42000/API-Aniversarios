@@ -11,12 +11,21 @@ function saveBirthday(nome, nascimento){
     });
 };
 
+function getBirthday(nome){
+    return data.aniversarios.filter(item => String(item.nome) === String(nome) );
+}
+
 http.createServer((req, res) => {
     const {nome, nascimento} = url.parse(req.url, true).query;
 
     if(nome && nascimento){
         saveBirthday(nome, nascimento);
         return res.end(JSON.stringify({message: "aniversario salvo"}));
+    }
+
+    if(nome && !nascimento){
+        return res.end(JSON.stringify(getBirthday(nome)));
+
     }
 
 
